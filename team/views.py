@@ -30,7 +30,7 @@ def get_my_team(request):
 
 @api_view(['POST',])
 def add_member(request):
-    team = Team.objects.filter(created_by=request.user)
+    team = Team.objects.filter(members__in=[request.user])
     email = request.data['email']
 
     print('Email', email)

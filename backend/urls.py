@@ -3,6 +3,7 @@ from django.urls import path, include
 from rest_framework.authtoken.views import obtain_auth_token
 from .views import registration_view, logout_view, protected
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', obtain_auth_token, name='login'),
@@ -11,4 +12,6 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
     path('api/', include('lead.urls')),
     path('api/', include('team.urls')),
+    path('api/', include('user.urls')),
+    path("api-auth/", include("rest_framework.urls")),
 ]

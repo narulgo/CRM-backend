@@ -11,7 +11,8 @@ urlpatterns = [
     path('protected/', protected, name='protected'),
     path('logout/', logout_view, name='logout'),
     path('api/', include('lead.urls')),
-    path('api/', include('team.urls')),
+    path('api/', include('client.urls')),
     path('api/', include('user.urls')),
+    path('api/', include('team.urls')),
     path("api-auth/", include("rest_framework.urls")),
 ]

@@ -15,7 +15,7 @@ from .models import Client, Note
 from .serializers import ClientSerializer, NoteSerializer
 
 class ClientPagination(PageNumberPagination):
-    page_size = 10
+    page_size = 5
 
 class ClientViewSet(viewsets.ModelViewSet):
     serializer_class = ClientSerializer

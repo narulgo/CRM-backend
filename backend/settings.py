@@ -4,6 +4,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-k3u$oqpe%d%wi(*knnjwm+33&)3@7g*=q9z2b3f45#42%vso57'
 
+STRIPE_PUB_KEY = 'pk_test_51IskUtBa5bOHd7L5NTRJPnQa7bKWKhKzTQwGqDQ1IU2PnCK78kHqAoHQcP4iFjpTL2SoSk5miaLTL4LjYf1nE72k00UvoOvrnA'
+STRIPE_SECRET_KEY = 'sk_test_51IskUtBa5bOHd7L5JLISWCnXcFxecSIZdUQfcXBbJAj3NpqfRrR4gDrBulRMjiGF64oPk7RGCboqKI71q7ATN5n800THD65kE0'
+
+STRIPE_PRICE_ID_SMALL_TEAM = 'price_1IuXkUBa5bOHd7L5VxwI8XnS'
+STRIPE_PRICE_ID_BIG_TEAM = 'price_1IuXlABa5bOHd7L5D7zel5a6'
+
+
+STRIPE_WEBHOOK_KEY = 'whsec_iV0qP1UMZEvR53tkDW7rGBE6EgFZ6sxj'
+
+FRONTEND_WEBSITE_SUCCESS_URL = 'http://localhost:8081/dashboard/team/plans/thankyou'
+FRONTEND_WEBSITE_CANCEL_URL = 'http://localhost:8081/dashboard/team/plans'
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
